@@ -8,19 +8,33 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "adbc-driver-postgresql>=1.8.0",
+    "geoalchemy2>=0.18.0",
     "geoarrow-pyarrow>=0.2.0",
     "geopandas>=1.1.1",
+    "h3>=4.3.0",
+    "haversine>=2.9.0",
+    "hnswlib>=0.8.0",
     "matplotlib>=3.10.3",
+    "networkx>=3.5",
+    "nglpy>=1.1.7",
+    "numba>=0.62.0",
     "numpy>=2.3.1",
     "osmnx>=2.0.5",
     "pandas>=2.3.1",
+    "psycopg2>=2.9.10",
     "pyarrow>=20.0.0",
     "pyarrow-stubs>=20.0.0.20250716",
+    "pynndescent>=0.5.13",
     "pyproj>=3.7.1",
     "quackosm>=0.15.2",
     "rasterio>=1.4.3",
     "rich>=14.0.0",
+    "rtree>=1.4.0",
+    "scipy>=1.16.2",
     "shapely>=2.1.1",
+    "sqlalchemy>=2.0.43",
+    "xarray>=2025.7.1",
 ]
 
 [project.scripts]
@@ -29,3 +43,8 @@ density = "density:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.0",
+]
