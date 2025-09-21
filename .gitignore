@@ -11,7 +11,5 @@ wheels/
 
 .Rhistory
 .Rproj.user/*
-data_census/*
-data_tmp_tiger/*
 data*
 .Rproj.user
