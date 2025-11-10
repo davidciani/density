@@ -41,5 +41,5 @@ hillshade_array = hillshade(dem, azimuth, angle_altitude)
 profile.update({"driver": "GTiff", "dtype": rasterio.uint8, "count": 1, "nodata": 0})
 
 # Save the hillshade to a new file
-with rasterio.open("data_tmp_out/hillshade.tif", "w", **profile) as dst:
+with rasterio.open("data/out/hillshade.tif", "w", **profile) as dst:
     dst.write(hillshade_array, 1)
