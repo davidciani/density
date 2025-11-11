@@ -63,13 +63,13 @@ gdf_lines["target"] = [v for u, v in G.edges()]
 
 print(gdf_lines.head())
 
-engine = create_engine(uri)
-gdf_lines.to_postgis("cbsa_relative_neighbors_graph", engine)
+#engine = create_engine(uri)
+#gdf_lines.to_postgis("cbsa_relative_neighbors_graph", engine)
 
-#ax = cbsa_gdf.plot(color="black", markersize=20, figsize=(10, 8))
-#gdf_lines.plot(ax=ax, color="red", linewidth=0.8)
-#plt.title("Relative Neighborhood Graph")
-#plt.xlabel("Longitude (degrees)")
-#plt.ylabel("Latitude (degrees)")
-#plt.grid(True)
-#plt.show()
+ax = cbsa_gdf.plot(color="black", markersize=10, figsize=(20, 16))
+gdf_lines.plot(ax=ax, color="red", linewidth=0.5)
+plt.title("Relative Neighborhood Graph")
+plt.xlabel("Longitude (degrees)")
+plt.ylabel("Latitude (degrees)")
+plt.grid(True)
+plt.show()
